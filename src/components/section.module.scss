@@ -1,0 +1,19 @@
+.section {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-bottom: 1rem;
+  
+  &_description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.chevron{
+    background-color: #00509D;
+    padding:1rem 0.7rem 0.5rem 0.7rem;
+    border-radius: 100%;
+
+}
