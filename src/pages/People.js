@@ -15,11 +15,13 @@ import {
 } from "../contents/faculty"
 
 import style from "./style.module.scss"
+import SubHeader from "../components/SubHeader"
 
 export default function People() {
   return (
     <div className={style.container}>
       <Header headingTitle="People" />
+      <SubHeader headingTitle="Faculty" />
 
       <FacultyItems description="Bioengineering" listItems={bio_faculty} />
       <FacultyItems

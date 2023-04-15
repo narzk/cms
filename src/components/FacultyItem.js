@@ -3,7 +3,7 @@ export default function FacultyItem({ listItems }) {
     <ul>
       {listItems.map((listItem) => (
         <li>
-          <a href={listItem.to} target="_blank">
+          <a href={listItem.to} target="_blank" rel="noreferrer">
             {listItem.name}
           </a>
         </li>
