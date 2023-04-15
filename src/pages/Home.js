@@ -1,7 +1,6 @@
-import Header from "../components/Header";
-import List from "../components/List";
-import Sections from "../components/Sections";
-import style from "./style.module.scss";
+import Header from "../components/Header"
+import Sections from "../components/Sections"
+import style from "./style.module.scss"
 
 import {
   BIOENGINEERING,
@@ -11,29 +10,21 @@ import {
   CIVIL,
   COMPUTER,
   ECONOMICS,
-  ECONOMICSI,
-  ECONOMICSII,
   GEOLOGY,
   MATH,
   MECHANICAL,
-  NUMERICAL_METHODS,
   PHYSICS,
-  PHYSICSI,
-  PHYSICSII,
-  PHYSICSIII,
-  PHYSICSIV,
   PSYCHOLOGY,
   SCIENCE_ENGINEERING,
-  SCIENTIFIC_COMPUTING,
   STATISTICS,
-} from "../contents";
-import SubHeader from "../components/SubHeader";
+} from "../contents"
+import SubHeader from "../components/SubHeader"
 
 export default function Home() {
   return (
     <div className={style.container}>
       <Header headingTitle="Requirements" />
-      <SubHeader headingTitle="Core Requirements" isSub/>
+      <SubHeader headingTitle="Core Requirements" isSub />
 
       <Sections
         heading={"Science/Engineering"}
@@ -41,7 +32,7 @@ export default function Home() {
         listItems={SCIENCE_ENGINEERING}
         hasMultiList
       />
-      <SubHeader headingTitle="Concentration Areas" isSub/>
+      <SubHeader headingTitle="Concentration Areas" isSub />
 
       <Sections
         heading={"Bioengineering"}
@@ -108,7 +99,6 @@ export default function Home() {
         listItems={PHYSICS}
         hasMultiList
       />
-  
 
       <Sections
         heading={"Psychology"}
@@ -121,5 +111,5 @@ export default function Home() {
         listItems={STATISTICS}
       />
     </div>
-  );
+  )
 }
