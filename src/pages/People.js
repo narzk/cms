@@ -1,5 +1,5 @@
-import Header from "../components/Header";
-import Sections from "../components/Sections";
+import Header from "../components/Header"
+import FacultyItems from "../components/FacultyItems"
 import {
   bio_faculty,
   chem_faculty,
@@ -12,81 +12,55 @@ import {
   mech_faculty,
   phy_faculty,
   stat_faculty,
-} from "../contents/faculty";
+} from "../contents/faculty"
 
-import style from "./style.module.scss";
+import style from "./style.module.scss"
 
 export default function People() {
   return (
     <div className={style.container}>
       <Header headingTitle="People" />
 
-      <Sections
-        heading={"Faculty"}
-        description="Bioengineering"
-        listItems={bio_faculty}
-      />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems description="Bioengineering" listItems={bio_faculty} />
+      <FacultyItems
         description="Biological Sciences"
-        listItems={["Durrant, Jacob"]}
+        listItems={[{ name: "Durrant, Jacob", to: "http://durrantlab.com/" }]}
       />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems
         description="Chemical and Petroleum Engineering"
         listItems={chem_pet_faculty}
       />
-      <Sections
-        heading={"Faculty"}
-        description="Chemistry"
-        listItems={chem_faculty}
-      />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems description="Chemistry" listItems={chem_faculty} />
+      <FacultyItems
         description="Civil and Environmental Engineering"
-        listItems={["Brigham, John"]}
+        listItems={[
+          { name: "Brigham, John", to: "http://www.pitt.edu/~brigham/" },
+        ]}
       />
-      <Sections
-        heading={"Faculty"}
-        description="Computer Science"
-        listItems={cs_faculty}
-      />
-      <Sections
+      <FacultyItems description="Computer Science" listItems={cs_faculty} />
+      <FacultyItems
         heading={"Faculty"}
         description="Economics"
         listItems={eco_faculty}
       />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems
         description="Geology and Environmental Science"
         listItems={geo_faculty}
       />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems
         description="Industrial Engineering"
         listItems={Industrial_faculty}
       />
-      <Sections
-        heading={"Faculty"}
-        description="Mathematics"
-        listItems={math_faculty}
-      />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems description="Mathematics" listItems={math_faculty} />
+      <FacultyItems
         description="Mechanical Engineering"
         listItems={mech_faculty}
       />
-      <Sections
-        heading={"Faculty"}
+      <FacultyItems
         description="Physics and Astronomy"
         listItems={phy_faculty}
       />
-      <Sections
-        heading={"Faculty"}
-        description="Statistics"
-        listItems={stat_faculty}
-      />
-      
+      <FacultyItems description="Statistics" listItems={stat_faculty} />
     </div>
-  );
+  )
 }
