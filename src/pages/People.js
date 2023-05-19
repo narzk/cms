@@ -19,50 +19,52 @@ import SubHeader from "../components/SubHeader"
 
 export default function People() {
   return (
-    <div className={style.container}>
+    <div style={{ position: "relative" }}>
       <Header headingTitle="People" />
-      <SubHeader headingTitle="Faculty" />
+      <div className={style.container}>
+        <SubHeader headingTitle="Faculty" />
 
-      <FacultyItems description="Bioengineering" listItems={bio_faculty} />
-      <FacultyItems
-        description="Biological Sciences"
-        listItems={[{ name: "Durrant, Jacob", to: "http://durrantlab.com/" }]}
-      />
-      <FacultyItems
-        description="Chemical and Petroleum Engineering"
-        listItems={chem_pet_faculty}
-      />
-      <FacultyItems description="Chemistry" listItems={chem_faculty} />
-      <FacultyItems
-        description="Civil and Environmental Engineering"
-        listItems={[
-          { name: "Brigham, John", to: "http://www.pitt.edu/~brigham/" },
-        ]}
-      />
-      <FacultyItems description="Computer Science" listItems={cs_faculty} />
-      <FacultyItems
-        heading={"Faculty"}
-        description="Economics"
-        listItems={eco_faculty}
-      />
-      <FacultyItems
-        description="Geology and Environmental Science"
-        listItems={geo_faculty}
-      />
-      <FacultyItems
-        description="Industrial Engineering"
-        listItems={Industrial_faculty}
-      />
-      <FacultyItems description="Mathematics" listItems={math_faculty} />
-      <FacultyItems
-        description="Mechanical Engineering"
-        listItems={mech_faculty}
-      />
-      <FacultyItems
-        description="Physics and Astronomy"
-        listItems={phy_faculty}
-      />
-      <FacultyItems description="Statistics" listItems={stat_faculty} />
+        <FacultyItems description="Bioengineering" listItems={bio_faculty} />
+        <FacultyItems
+          description="Biological Sciences"
+          listItems={[{ name: "Durrant, Jacob", to: "http://durrantlab.com/" }]}
+        />
+        <FacultyItems
+          description="Chemical and Petroleum Engineering"
+          listItems={chem_pet_faculty}
+        />
+        <FacultyItems description="Chemistry" listItems={chem_faculty} />
+        <FacultyItems
+          description="Civil and Environmental Engineering"
+          listItems={[
+            { name: "Brigham, John", to: "http://www.pitt.edu/~brigham/" },
+          ]}
+        />
+        <FacultyItems description="Computer Science" listItems={cs_faculty} />
+        <FacultyItems
+          heading={"Faculty"}
+          description="Economics"
+          listItems={eco_faculty}
+        />
+        <FacultyItems
+          description="Geology and Environmental Science"
+          listItems={geo_faculty}
+        />
+        <FacultyItems
+          description="Industrial Engineering"
+          listItems={Industrial_faculty}
+        />
+        <FacultyItems description="Mathematics" listItems={math_faculty} />
+        <FacultyItems
+          description="Mechanical Engineering"
+          listItems={mech_faculty}
+        />
+        <FacultyItems
+          description="Physics and Astronomy"
+          listItems={phy_faculty}
+        />
+        <FacultyItems description="Statistics" listItems={stat_faculty} />
+      </div>
     </div>
   )
 }

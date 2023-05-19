@@ -4,16 +4,40 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   margin-bottom: 1rem;
-  
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(209, 225, 228);
+  }
   &_description {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &_paragraph {
+      max-height: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &_chevron_mobile {
+    display: none;
   }
 }
-.chevron{
-    background-color: #00509D;
-    padding:1rem 0.7rem 0.5rem 0.7rem;
+.chevron {
+  background-color: #00509d;
+  padding: 1rem 0.7rem 0.5rem 0.7rem;
+  border-radius: 100%;
+}
+@media (max-width: 768px) {
+  .section_chevron {
+    display: none;
+  }
+  .chevron {
+    background-color: transparent;
+    padding: 1rem 0.7rem 0.5rem 0.7rem;
     border-radius: 100%;
-
+  }
+  .section_chevron_mobile {
+    display: block;
+  }
 }

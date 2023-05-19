@@ -4,6 +4,11 @@
   justify-content: space-between;
   padding: 2rem;
   border-bottom: 2px solid #feb81a;
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
   &_title {
     font-size: 4rem;
   }
@@ -38,15 +43,52 @@
 .item {
   padding: 1rem;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 
-  &:hover {
+  &_active {
     background-color: #feb81a;
     border-radius: 2rem;
     color: #00509d;
   }
-  &:active {
-    background-color: #feb81a;
-    border-radius: 2rem;
-    color: #00509d;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .heading {
+    padding: 1rem 0;
+  }
+  .heading_title {
+    font-size: 2rem;
+  }
+  .heading_textTop {
+    display: none;
+  }
+  .heading_text {
+    display: none;
+  }
+  .nav_column {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(20, 34, 151, 0.3);
+    backdrop-filter: blur(20px);
+    width: 50%;
+    right: 0;
+    > span {
+      font-size: 2rem;
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+      top: 1rem;
+    }
+  }
+  .nav_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
   }
 }
